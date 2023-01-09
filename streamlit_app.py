@@ -46,7 +46,7 @@ except URLError as e:
     
 
 #trouble shooting
-streamlit.stop()
+
 streamlit.header("The fruit load list contains")
 
 #Snow related functions
@@ -61,6 +61,7 @@ if streamlit.button('Get Fruit Load List'):
   my_data_rows = get_fruit_load_list
   streamlit.dataframe(my_data_rows)
 
+streamlit.stop()
 
 # Allow users to add fruits to the lsit
 add_my_fruit = streamlit.text_input('What fruit would you like to add?','Orange')
